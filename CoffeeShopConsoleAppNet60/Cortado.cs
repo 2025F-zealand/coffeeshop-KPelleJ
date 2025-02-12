@@ -8,12 +8,12 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class Cortado : Coffee, IMlMilk
     {
-        public Cortado(int discount) : base(discount) 
+        public Cortado(int discount, Blend blend) : base(discount, blend) 
         {
             this.Name = "Cortado";
         }
 
-        public int mlMilk()
+        public int MlMilk()
         {
             return 40;
         }

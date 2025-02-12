@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    public interface IMlMilk
-    {
-        int MlMilk();
+    public enum Blend 
+    { 
+        Reshad,
+        Kieni,
+        Bacca,
+        Potente
     }
 }
