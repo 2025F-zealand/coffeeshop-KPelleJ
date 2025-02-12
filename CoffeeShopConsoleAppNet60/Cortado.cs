@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    public class Cortado : Coffee
+    public class Cortado : Coffee, IMlMilk
     {
-        public Cortado() 
+        public Cortado(int discount) : base(discount) 
         {
             this.Name = "Cortado";
         }
 
+        public int mlMilk()
+        {
+            return 40;
+        }
+
         public override int Price()
         {
-            return 25;
+            return 25-Discount;
         }
 
         public override string Strength()

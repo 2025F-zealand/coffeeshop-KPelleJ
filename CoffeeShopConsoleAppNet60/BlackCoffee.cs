@@ -8,7 +8,7 @@ namespace CoffeeShopConsoleAppNet60
 {
     public class BlackCoffee : Coffee
     {
-        public BlackCoffee()
+        public BlackCoffee(int discount):base(discount)
         {
             this.Name = "Black Coffee";
         }

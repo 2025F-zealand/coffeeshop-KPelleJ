@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    public class Latte : Coffee, IMlMilk
+    public class FlatWhite : Coffee, IMlMilk
     {
-        public Latte(int discount):base(discount) 
+        public FlatWhite(int discount):base(discount) 
         {
-            this.Name = "Latte";
+            this.Name = "Flat White";
         }
 
         public int mlMilk()
         {
-            return 200;
+            return 150;
         }
 
         public override int Price()
         {
-            return 40-Discount;    
+            return 5000000-Discount;
         }
 
         public override string Strength()
         {
-            return "Weak";
+            return "Medium";
         }
     }
 }
