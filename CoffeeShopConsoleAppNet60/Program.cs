@@ -15,7 +15,7 @@ internal class Program
             Console.WriteLine($"The Coffee Menu:");
             foreach (Coffee coffee in coffeeMenu)
             {
-                Console.WriteLine($"{coffee.Name} -- {coffee.Price()} -- Strength: {coffee.Strength()}");
+                Console.WriteLine($"{coffee.Name} -- {coffee.Price()} -- Strength: {coffee.Strength()} -- Blend: {coffee.Blend}");
             }
 
             Console.WriteLine(order1.ToString());

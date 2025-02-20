@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopConsoleAppNet60
 {
-    internal class Espresso : Coffee
+    public class Espresso : Coffee
     {
         public Espresso(int discount, Blend blend) : base(discount, blend)
         {

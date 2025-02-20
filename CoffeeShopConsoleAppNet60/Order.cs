@@ -34,13 +34,7 @@ namespace CoffeeShopConsoleAppNet60
 
         public int TotalPrice()
         {
-            int output = 0;
-
-            foreach (var c in CoffesOnOrder)
-            {
-                output += c.Price();
-            }
-
+            int output = CoffesOnOrder.Sum(c => c.Price());
             return output;
         }
 
@@ -51,13 +45,7 @@ namespace CoffeeShopConsoleAppNet60
 
         public int TotalDiscount()
         {
-            int output = 0;
-
-            foreach(var c in CoffesOnOrder)
-            {
-                output += c.Discount;
-            }
-
+            int output = CoffesOnOrder.Sum(c => c.Discount);
             return output;
         }
 
@@ -73,9 +61,9 @@ namespace CoffeeShopConsoleAppNet60
             { 
                 orderDetails.AppendLine($"{c.Name} -- {c.Price()}kr"); 
             }
+
             orderDetails.AppendLine($"Number of items: {this.OrderItemCount()}");
             orderDetails.AppendLine($"Total price = {this.TotalPrice()}kr (discount = {this.TotalDiscount()})");
-
             orderDetails.AppendLine($"We hope you enjoy your coffee, you have been served by {this.BaristaName}");
 
             return orderDetails.ToString();

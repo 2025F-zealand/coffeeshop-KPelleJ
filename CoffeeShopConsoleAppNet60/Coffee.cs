@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,7 @@ namespace CoffeeShopConsoleAppNet60
     {
         public string Name { get; protected set; }
         public int Discount { get; protected set; }
-        private Blend Blend { get; set; }
-
+        public Blend Blend { get; private set; }
 
         public Coffee(int discount, Blend blend) 
         {
@@ -26,7 +26,7 @@ namespace CoffeeShopConsoleAppNet60
 
         public virtual int Price()
         {
-            return 20-Discount; 
+            return 20-Discount;
         }
 
         public abstract string Strength();
